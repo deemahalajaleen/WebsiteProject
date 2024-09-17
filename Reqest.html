@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Requests</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #d2eceb;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Logos */
+        .logo {
+            position: absolute;
+            top: 20px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo.left {
+            left: 20px;
+        }
+
+        .logo.right {
+            right: 20px;
+        }
+
+        /* Title */
+        .title {
+            margin-top: 100px;
+            font-size: 36px;
+            color: #439676;
+        }
+
+        /* Bar with clickable links */
+        .status-bar {
+            display: flex;
+            margin-top: 50px;
+            border: 2px solid #439676;
+            border-radius: 20px;
+            padding: 10px 30px;
+            justify-content: space-between;
+            width: 500px;
+        }
+
+        .status-bar a {
+            font-size: 18px;
+            color: #439676;
+            padding: 5px 10px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Hover effect to show interactivity */
+        .status-bar a:hover {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+        }
+
+        /* Hidden section for student lists */
+        .student-list {
+            display: none;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* Shape Style - To Match the Uploaded Image */
+        .student-entry {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #609389; /* Adjust color to match image */
+            border-radius: 50px;
+            color: white;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* For profile pic to appear within the shape */
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Student Name inside the shape */
+        .student-name {
+            flex-grow: 1;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Action buttons inside the shape */
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .accept-btn, .reject-btn {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .accept-btn {
+            background-color: #c7f2e0;
+            color: #439676;
+        }
+
+        .reject-btn {
+            background-color: #f2c7c7;
+            color: #aa4e4e;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            .logo {
+                width: 40px;
+                height: 40px;
+                top: 10px;
+            }
+
+            .title {
+                font-size: 24px;
+            }
+
+            .status-bar {
+                width: 250px;
+            }
+
+            .status-bar a {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <script>
+        function showList(status) {
+            // Hide all lists
+            document.getElementById('accepted-list').style.display = 'none';
+            document.getElementById('rejected-list').style.display = 'none';
+            document.getElementById('pending-list').style.display = 'none';
+            
+            // Show the selected list
+            document.getElementById(status + '-list').style.display = 'block';
+        }
+
+        function acceptStudent(studentName) {
+            alert(`${studentName} has been accepted!`);
+            // Logic to move student to the accepted list
+            moveStudent(studentName, 'accepted-list');
+        }
+
+        function rejectStudent(studentName) {
+            alert(`${studentName} has been rejected!`);
+            // Logic to move student to the rejected list
+            moveStudent(studentName, 'rejected-list');
+        }
+
+        function moveStudent(studentName, targetListId) {
+            const studentEntry = document.querySelector(`.student-entry[data-name='${studentName}']`);
+            if (studentEntry) {
+                document.getElementById(targetListId).appendChild(studentEntry);
+                studentEntry.querySelector('.actions').remove(); // Remove the accept/reject buttons
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Logos -->
+    <img src="images/image1.jpeg" alt="Left Logo" class="logo left">
+    <img src="images/image2.jpeg" alt="Right Logo" class="logo right">
+
+    <!-- Title -->
+    <div class="title">Course Requests</div>
+
+    <!-- Status Bar with clickable choices -->
+    <div class="status-bar">
+        <a onclick="showList('accepted')">Accepted</a>
+        <a onclick="showList('rejected')">Rejected</a>
+        <a onclick="showList('pending')">Pending</a>
+    </div>
+
+    <!-- Accepted List -->
+    <div id="accepted-list" class="student-list"></div>
+
+    <!-- Rejected List -->
+    <div id="rejected-list" class="student-list"></div>
+
+    <!-- Pending List -->
+    <div id="pending-list" class="student-list" style="display: block;">
+        <div class="student-entry" data-name="Abdullah">
+            <div class="student-name">Abdullah</div>
+            <div class="actions">
+                <div class="accept-btn" onclick="acceptStudent('Abdullah')">Accept</div>
+                <div class="reject-btn" onclick="rejectStudent('Abdullah')">Reject</div>
+            </div>
+        </div>
+        <div class="student-entry" data-name="Aliah">
+            <div class="student-name">Aliah</div>
+            <div class="actions">
+                <div class="accept-btn" onclick="acceptStudent('Aliah')">Accept</div>
+                <div class="reject-btn" onclick="rejectStudent('Aliah')">Reject</div>
+            </div>
+        </div>
+        <div class="student-entry" data-name="Reem">
+            <div class="student-name">Reem</div>
+            <div class="actions">
+                <div class="accept-btn" onclick="acceptStudent('Reem')">Accept</div>
+                <div class="reject-btn" onclick="rejectStudent('Reem')">Reject</div>
+            </div>
+        </div>
+        <div class="student-entry" data-name="Abdullaziz">
+            <div class="student-name">Abdullaziz</div>
+            <div class="actions">
+                <div class="accept-btn" onclick="acceptStudent('Abdullaziz')">Accept</div>
+                <div class="reject-btn" onclick="rejectStudent('Abdullaziz')">Reject</div>
+            </div>
+        </div>
+        <div class="student-entry" data-name="Omar">
+            <div class="student-name">Omar</div>
+            <div class="actions">
+                <div class="accept-btn" onclick="acceptStudent('Omar')">Accept</div>
+                <div class="reject-btn" onclick="rejectStudent('Omar')">Reject</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

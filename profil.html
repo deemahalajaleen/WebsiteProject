@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Form</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b1e3d5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container */
+        .container {
+            background-color: rgb(70, 146, 113);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+            position: relative;
+        }
+
+        /* Logo */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .logo img {
+            width: 100px; /* Adjust the size of your logo */
+            height: 100px;
+            border-radius: 50%; /* Make the logo circular */
+            object-fit: cover; /* Ensure the image fits inside the circle */
+        }
+
+        /* Profile Image Placeholder */
+        .profile-image img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        /* Input Fields Styling */
+        .input-fields {
+            margin-bottom: 20px;
+        }
+
+        .input-box {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(145deg, #7fe1c2, #7fe1c2);
+            color: rgb(5, 4, 4);
+            font-size: 16px;
+            text-align: center;
+            box-shadow: inset 0 1px 3px rgba(35, 116, 51, 0.3);
+        }
+
+        /* Buttons Styling */
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .save-btn, .delete-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            background-color: #b42b2b;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            flex: 1;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .save-btn:hover, .delete-btn:hover {
+            background-color: #c850c0;
+        }
+
+        .delete-btn {
+            background-color: #b42b2b;
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="images/image1.jpeg" alt="Logo"> <!-- Replace with your logo image path -->
+    </div>
+    <div class="container">
+        <!-- Profile Image -->
+        <div class="profile-image">
+            <img src="images/image2.jpeg" alt="Profile">
+        </div>
+        
+        <!-- Input Fields -->
+        <div class="input-fields">
+            <input type="text" placeholder="Enter first name..." class="input-box">
+            <input type="text" placeholder="Enter last name..." class="input-box">
+            <input type="email" placeholder="Enter email..." class="input-box">
+            <input type="password" placeholder="Enter password..." class="input-box">
+        </div>
+        
+        <!-- Buttons -->
+        <div class="buttons">
+            <button class="save-btn">Save Changes</button>
+            <button class="delete-btn">Delete Profile</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
