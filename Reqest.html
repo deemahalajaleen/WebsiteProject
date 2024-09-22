@@ -15,7 +15,6 @@
             align-items: center;
         }
 
-        /* Logos */
         .logo {
             position: absolute;
             top: 20px;
@@ -33,14 +32,12 @@
             right: 20px;
         }
 
-        /* Title */
         .title {
             margin-top: 100px;
             font-size: 36px;
             color: #439676;
         }
 
-        /* Bar with clickable links */
         .status-bar {
             display: flex;
             margin-top: 50px;
@@ -59,13 +56,11 @@
             cursor: pointer;
         }
 
-        /* Hover effect to show interactivity */
         .status-bar a:hover {
             background-color: #f0f0f0;
             border-radius: 10px;
         }
 
-        /* Hidden section for student lists */
         .student-list {
             display: none;
             margin-top: 20px;
@@ -73,14 +68,13 @@
             max-width: 500px;
         }
 
-        /* Shape Style - To Match the Uploaded Image */
         .student-entry {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: space-between;
             margin-bottom: 20px;
             padding: 20px;
-            background-color: #609389; /* Adjust color to match image */
+            background-color: #609389;
             border-radius: 50px;
             color: white;
             width: 100%;
@@ -88,7 +82,6 @@
             text-align: center;
         }
 
-        /* For profile pic to appear within the shape */
         .profile-pic {
             width: 40px;
             height: 40px;
@@ -96,18 +89,23 @@
             object-fit: cover;
         }
 
-        /* Student Name inside the shape */
         .student-name {
-            flex-grow: 1;
-            padding: 10px;
-            color: white;
+            font-size: 18px;
             font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
         }
 
-        /* Action buttons inside the shape */
+        .course-details {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #d2eceb;
+        }
+
         .actions {
             display: flex;
             gap: 10px;
+            justify-content: center;
         }
 
         .accept-btn, .reject-btn {
@@ -131,7 +129,6 @@
             display: none;
         }
 
-        /* Mobile responsiveness */
         @media (max-width: 600px) {
             .logo {
                 width: 40px;
@@ -154,24 +151,19 @@
     </style>
     <script>
         function showList(status) {
-            // Hide all lists
             document.getElementById('accepted-list').style.display = 'none';
             document.getElementById('rejected-list').style.display = 'none';
             document.getElementById('pending-list').style.display = 'none';
-            
-            // Show the selected list
             document.getElementById(status + '-list').style.display = 'block';
         }
 
         function acceptStudent(studentName) {
             alert(`${studentName} has been accepted!`);
-            // Logic to move student to the accepted list
             moveStudent(studentName, 'accepted-list');
         }
 
         function rejectStudent(studentName) {
             alert(`${studentName} has been rejected!`);
-            // Logic to move student to the rejected list
             moveStudent(studentName, 'rejected-list');
         }
 
@@ -179,20 +171,17 @@
             const studentEntry = document.querySelector(`.student-entry[data-name='${studentName}']`);
             if (studentEntry) {
                 document.getElementById(targetListId).appendChild(studentEntry);
-                studentEntry.querySelector('.actions').remove(); // Remove the accept/reject buttons
+                studentEntry.querySelector('.actions').remove();
             }
         }
     </script>
 </head>
 <body>
-    <!-- Logos -->
     <img src="images/image1.jpeg" alt="Left Logo" class="logo left">
     <img src="images/image2.jpeg" alt="Right Logo" class="logo right">
 
-    <!-- Title -->
     <div class="title">Course Requests</div>
 
-    <!-- Status Bar with clickable choices -->
     <div class="status-bar">
         <a onclick="showList('accepted')">Accepted</a>
         <a onclick="showList('rejected')">Rejected</a>
@@ -209,6 +198,12 @@
     <div id="pending-list" class="student-list" style="display: block;">
         <div class="student-entry" data-name="Abdullah">
             <div class="student-name">Abdullah</div>
+            <div class="course-details">
+                Course: SWE 221 <br>
+                Wendnesday 9-10:30 am<br>
+                Requested Date: 12/8/2024<br>
+                Duration: 72 hours
+            </div>
             <div class="actions">
                 <div class="accept-btn" onclick="acceptStudent('Abdullah')">Accept</div>
                 <div class="reject-btn" onclick="rejectStudent('Abdullah')">Reject</div>
@@ -216,6 +211,12 @@
         </div>
         <div class="student-entry" data-name="Aliah">
             <div class="student-name">Aliah</div>
+            <div class="course-details">
+                Course: IS 230<br>
+                Saturday 8-9 am<br>
+                Requested Date: 12/6/2024<br>
+                Duration: 72 hours
+            </div>
             <div class="actions">
                 <div class="accept-btn" onclick="acceptStudent('Aliah')">Accept</div>
                 <div class="reject-btn" onclick="rejectStudent('Aliah')">Reject</div>
@@ -223,6 +224,12 @@
         </div>
         <div class="student-entry" data-name="Reem">
             <div class="student-name">Reem</div>
+            <div class="course-details">
+                Course: SWE 333<br>
+                Monday 10-12:30 am<br>
+                Requested Date: 12/10/2024<br>
+                Duration: 72 hours
+            </div>
             <div class="actions">
                 <div class="accept-btn" onclick="acceptStudent('Reem')">Accept</div>
                 <div class="reject-btn" onclick="rejectStudent('Reem')">Reject</div>
@@ -230,6 +237,12 @@
         </div>
         <div class="student-entry" data-name="Abdullaziz">
             <div class="student-name">Abdullaziz</div>
+            <div class="course-details">
+                Course: CSC 220<br>
+                Thursday 9-10 am<br>
+                Requested Date: 20/10/2024<br>
+                Duration: 72 hours
+            </div>
             <div class="actions">
                 <div class="accept-btn" onclick="acceptStudent('Abdullaziz')">Accept</div>
                 <div class="reject-btn" onclick="rejectStudent('Abdullaziz')">Reject</div>
@@ -237,15 +250,21 @@
         </div>
         <div class="student-entry" data-name="Omar">
             <div class="student-name">Omar</div>
+            <div class="course-details">
+                Course: CSC 212<br>
+                Sunday 8-9 am<br>
+                Requested Date: 1/5/2024<br>
+                Duration: 72 hours
+            </div>
             <div class="actions">
                 <div class="accept-btn" onclick="acceptStudent('Omar')">Accept</div>
                 <div class="reject-btn" onclick="rejectStudent('Omar')">Reject</div>
             </div>
         </div>
     </div>
-
 </body>
 </html>
+
 
 
 

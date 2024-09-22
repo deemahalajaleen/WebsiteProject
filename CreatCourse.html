@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Course</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            background-color: #c3dfde;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 100px;
+            color: #36594d; /* Dark green color */
+            margin-top: 20px;
+        }
+
+        .container {
+            width: 500px;
+            background-color: rgb(228, 241, 238);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(210, 239, 230, 0.1);
+            position: relative;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #4a9086;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #02e050;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #9dd1bf;
+        }
+    </style>
+</head>
+<body>
+    <!-- Create Course Title at the Top -->
+    <h1>Create a Course</h1>
+
+    <div class="container">
+        <!-- Create Course Section -->
+        <div class="form-container">
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter course Title..." id="course-title">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Enter Course Description..." id="course-description"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="add-course">Add the Course</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
