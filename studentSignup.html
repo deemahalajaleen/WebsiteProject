@@ -10,9 +10,31 @@
   <h1>Smart Learn</h1>
 </header>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Learn - Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Smart Learn</h1>
+</header>
+
 <main>
+  <h2 class="center-heading">Become a Learner</h2> <!-- Heading outside the white box -->
   <section id="signup">
-    <h2>Become a Learner!!</h2> 
+    <img src="photo.jpg" alt="Image Description" class="photo">
+
+    <!-- Profile picture upload option placed under the image -->
+    <div class="profile-upload">
+      <label for="profile-pic">Choose a profile picture (optional):</label>
+      <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+    </div>
+
     <form>
       <input type="text" placeholder="First Name" required>
       <input type="text" placeholder="Last Name" required>
@@ -37,7 +59,7 @@
 
 <footer>
   <p>&copy; 2024 Smart Learn</p>
-  <p>Contact us: <a href="mailto:support@smartlearn.com">support@smartlearn.com</a> </p>
+  <p>Contact us: <a href="mailto:support@smartlearn.com">support@smartlearn.com</a></p>
 </footer>
 
 </body>
