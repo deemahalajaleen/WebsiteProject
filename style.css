@@ -16,20 +16,55 @@ header {
 main {
   padding: 2em;
 }
-
+.center-heading {
+  text-align: center;
+  color: #008080; /* Teal color */
+  font-size: 2em;
+  margin: 0 auto 20px auto;
+  display: block;
+  position: relative;
+  top: 0; /* Adjust as necessary */
+}
 section {
   background-color: #fff;
   border-radius: 5px;
   padding: 2em;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 2em; 
+  max-width: 600px; /* Limit width for better readability */
+  margin: 0 auto; /* Center the section */
+  margin-top: 20px;
 }
+
 
 h1, h2 {
   color: #008080; /* Teal headings */
 }
 
-/* Form styles */
+
+/* Center the image and the upload input */
+.photo {
+  display: block;
+  width: 200px; 
+  height: 200px; 
+  border-radius: 50%; 
+  object-fit: cover;
+  margin: 0 auto 20px auto;
+}
+
+/* Ensure profile-upload is centered and aligned under the image */
+.profile-upload {
+  text-align: center;
+  margin-top: 20px; /* Add spacing between the image and upload input */
+  margin-bottom: 30px;
+}
+
+.profile-upload label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
 form input[type="text"],
 form input[type="email"],
 form input[type="password"],
@@ -43,6 +78,7 @@ form select {
   box-sizing: border-box;
 }
 
+
 button[type="submit"] {
   background-color: #008080; /* Teal button */
   color: #fff;
@@ -50,6 +86,12 @@ button[type="submit"] {
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  width: 100%; /* Make the button full width for consistency */
+  font-size: 1em;
+}
+
+button[type="submit"]:hover {
+  background-color: #006666; /* Darker teal on hover */
 }
 
 footer {
@@ -59,7 +101,21 @@ footer {
   padding: 1em 0;
 }
 
-/* Hero section styles (Page 1) */
+.login-option {
+  text-align: center;
+}
+
+.login-option a {
+  color: #008080; /* Teal link color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-option a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section styles */
 .hero {
   display: flex;
   align-items: center;
@@ -106,5 +162,12 @@ footer {
 }
 
 .login-links a {
-  color: #
+  color: #008080;
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
   
