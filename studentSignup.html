@@ -1,16 +1,4 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Smart Learn - Sign Up</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header>
-  <h1>Smart Learn</h1>
-</header>
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -21,7 +9,10 @@
 <body>
 
 <header>
-  <h1>Smart Learn</h1>
+  <div class="header-content">
+    <img src="icon.jpg" alt="Smart Learn Logo" class="header-logo">
+    <h1>Smart Learn</h1>
+  </div>
 </header>
 
 <main>
@@ -39,13 +30,14 @@
       <input type="text" placeholder="First Name" required>
       <input type="text" placeholder="Last Name" required>
       <input type="number" placeholder="Age" required> 
-      <select placeholder="Gender" required>
+      <select required>
         <option value="" disabled selected>Select Gender</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
         <option value="other">Other</option>
       </select>
       <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required> <!-- Password input added here -->
       <input type="text" placeholder="Country" required> 
       <input type="text" placeholder="Province" required> 
       <button type="submit">Sign Up</button>
@@ -64,3 +56,4 @@
 
 </body>
 </html>
+
