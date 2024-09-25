@@ -9,12 +9,17 @@
 <body>
 
 <header>
-  <h1>Smart Learn</h1>
+  <div class="header-content">
+    <img src="icon.jpg" alt="Smart Learn Logo" class="header-logo">
+    <h1>Smart Learn</h1>
+  </div>
 </header>
 
 <main>
+  <!-- Moved the heading outside the form section and centered it -->
+  <h2 class="center-heading">Become a Teacher!!</h2>
+
   <section id="signup">
-    <h2>Become a Teacher!!</h2> 
     <form>
       
       <div class="form-group">
@@ -27,13 +32,11 @@
         <input type="text" id="last-name" placeholder="Last Name" required>
       </div>
 
-      
       <div class="form-group">
         <label for="age">Age:</label>
         <input type="number" id="age" placeholder="Age" required>
       </div>
 
-      
       <div class="form-group">
         <label for="gender">Gender:</label>
         <select id="gender" required>
@@ -44,13 +47,11 @@
         </select>
       </div>
 
-      
       <div class="form-group">
         <label for="email">Email:</label>
         <input type="email" id="email" placeholder="Email" required>
       </div>
 
-      
       <div class="form-group">
         <label for="country">Country:</label>
         <input type="text" id="country" placeholder="Country" required>
@@ -61,7 +62,6 @@
         <input type="text" id="province" placeholder="Province" required>
       </div>
 
-      
       <div class="form-group">
         <label for="languages">Languages Spoken:</label>
         <select id="languages" required>
@@ -79,7 +79,6 @@
         </select>
       </div>
 
-   
       <div class="form-group">
         <label for="language-level">Language Level:</label>
         <select id="language-level" required>
@@ -91,13 +90,15 @@
         </select>
       </div>
 
-     
+      <!-- Bio Section -->
+      <div class="form-group">
+        <label for="bio">Bio:</label>
+        <textarea id="bio" placeholder="Tell us about yourself" rows="4" required></textarea>
+      </div>
 
-      
       <button type="submit">Sign Up</button>
     </form>
 
-    
     <div class="login-option">
       <p>Already have an account? <a href="loginTeatcher.html">Log in here</a></p>
     </div>
@@ -111,3 +112,4 @@
 
 </body>
 </html>
+
