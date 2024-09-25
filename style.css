@@ -86,13 +86,22 @@ form input[type="text"],
 form input[type="email"],
 form input[type="password"],
 form input[type="number"], 
-form select {
+form select, 
+form textarea {
   width: 100%;
   padding: 0.8em;
   margin-bottom: 1em;
   border: 1px solid #ccc;
   border-radius: 3px;
   box-sizing: border-box;
+}
+
+/* Adjusted Bio (textarea) style to match other inputs */
+form textarea {
+  resize: vertical; /* Allows vertical resizing only */
+  min-height: 150px; /* Set a minimum height for better UX */
+  font-family: inherit; /* Make sure the font matches the rest */
+  line-height: 1.5; /* Improve text readability */
 }
 
 button[type="submit"] {
@@ -130,3 +139,4 @@ footer {
 .login-option a:hover {
   text-decoration: underline;
 }
+
