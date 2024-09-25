@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header-style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="assets/font_awesome/css/all.min.css">
+    <link rel="icon" href="assets/icons/smart-learn-icon.png">
+    <title>Smart Learner</title>
+    <style>
+        /* Style for the dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show dropdown menu when hovering over the user icon */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Add a bit of spacing between the icon and the dropdown content */
+        .user-icon {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="assets\icons\smart-learn-icon.png" alt="Smart Learn Logo">
+            </div>
+
+            <nav class="navList">
+                <ul>
+                    <li><a href="#" class="activeLi">Available Courses</a></li>
+                    <li><a href="complete-courses.html">Complete Courses</a></li>
+                    <li><a href="incoming-sessions.html">Incoming Sessions</a></li>
+                    <li><a href="previous-sessions.html">Previous Sessions</a></li>
+                </ul>
+
+                <div class="mobile-nav">
+                    <img src="assets/icons/menu.png" width="28" height="23">
+                </div>
+            </nav>
+
+            <!-- User Icon with Dropdown -->
+            <div class="user-icon dropdown">
+                <i class="fas fa-user-circle"></i>
+                <div class="dropdown-content">
+                    <a href="#profile">Profile</a>
+                    <a href="#signout">Sign-out</a>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="search-bar">
+            <a href="teacher.html">
+                <span class="search-icon"><i class="fas fa-search"></i></span>
+            </a>
+            <input type="text" class="search-input" placeholder="Search for a course or teacher">
+            <i class="fas fa-users people-icon"></i>
+        </div>
+
+        <main>
+            <div class="courses-container">
+                <!-- 1 -->
+                <a href="main-courses-pages/computer-scince.html">
+                    <div class="course-card">
+                        <img src="assets\images\300x180.png" alt="CS50's Introduction to Computer Science">
+                        <h2>CS50's Introduction to Computer Science</h2>
+                        <p><b>Teacher:</b> David J. Malan</p>
+                        <p>A comprehensive introduction to computer science. Learn algorithms, data structures, and
+                            more.</p>
+                    </div>
+                </a>
+
+                <!-- 2 -->
+                <a href="main-courses-pages/crash-course.html">
+                    <div class="course-card">
+                        <img src="assets\images\300x180.png" alt="Crash Course on Python">
+                        <h2>Crash Course on Python</h2>
+                        <p><b>Teacher:</b> David J. Malan</p>
+                        <p>Get started with Python programming, learning key concepts and solving coding challenges.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- 3 -->
+                <a href="main-courses-pages/software-engineering.html">
+                    <div class="course-card">
+                        <img src="assets\images\300x180.png" alt="Introduction to Software Engineering">
+                        <h2>Introduction to Software Engineering</h2>
+                        <p><b>Teacher:</b> David J. Malan</p>
+                        <p>Learn software development, architecture, and Agile practices for software engineering.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- 4 -->
+                <!-- <a href="main-courses-pages/google-cybersecurity.html">
+                    <div class="course-card">
+                        <img src="assets\images\300x180.png" alt="Google Cybersecurity Professional Certificate">
+                        <h2>Google Cybersecurity Certificate</h2>
+                        <p><b>Teacher:</b> Google Cybersecurity Team</p>
+                        <p>Master the basics of cybersecurity, including risk management and network security.</p>
+                    </div>
+                </a> -->
+
+                <!-- 5 -->
+                <!-- <a href="main-courses-pages/fundamentals.html">
+                    <div class="course-card">
+                        <img src="assets\images\300x180.png" alt="Learn to Program: The Fundamentals">
+                        <h2>Learn to Program: The Fundamentals</h2>
+                        <p><b>Teacher:</b> Jennifer Campbell, Paul Gries</p>
+                        <p>Start programming from scratch with Python. Learn core concepts like loops and functions.
+                        </p>
+                    </div>
+                </a> -->
+
+                <!-- 6 -->
+                <!-- <a href="main-courses-pages/ai-python.html">
+                    <div class="course-card">
+                        <img src="assets\images\300x180.png" alt="Introduction to Artificial Intelligence with Python">
+                        <h2>AI with Python</h2>
+                        <p><b>Teacher:</b> David J. Malan, Brian Yu</p>
+                        <p>An in-depth course on Artificial Intelligence, covering neural networks and machine
+                            learning.
+                        </p>
+                    </div>
+                </a> -->
+
+                <!-- 7 -->
+                <!-- <a href="main-courses-pages/fundamentals-computing.html">
+                    <div class="course-card">
+                        <img src="assets\images\300x180.png" alt="Fundamentals of Computing">
+                        <h2>Fundamentals of Computing</h2>
+                        <p><b>Teacher:</b> Scott Rixner, Joe Warren</p>
+                        <p>Build strong programming skills and learn complex algorithms with Python.</p>
+                    </div>
+                </a> -->
+
+                <!-- 8 -->
+                <!-- <a href="main-courses-pages/computational-thinking.html">
+                    <div class="course-card">
+                        <img src="assets\images\300x180.png" alt="Computational Thinking for Problem Solving">
+                        <h2>Computational Thinking for Problem Solving</h2>
+                        <p><b>Teacher:</b> Susan Davidson, Chris Murphy</p>
+                        <p>Master computational thinking and learn how to approach problems using algorithms.</p>
+                    </div>
+                </a> -->
+        </main>
+
+        <footer>
+            <p>Contact us: <a href="mailto:support@smartlearn.com">support@smartlearn.com</a></p>
+            <p>&copy; 2024 Smart Learn</p>
+        </footer>
+    </div>
+</body>
+
+</html>
