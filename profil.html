@@ -10,10 +10,68 @@
             font-family: Arial, sans-serif;
             background-color: #b1e3d5;
             display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Main content container */
+        .main-content {
+            flex: 1; /* Makes this section grow to fill available space */
+            display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: #4a9086;
+            width: 100%;
+            padding: 10px 0; /* Reduced padding */
+            height: 70px; /* Reduced height */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        /* Logos inside header */
+        .logo {
+            width: 50px; /* Reduced logo size */
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+      
+
+        /* Footer */
+        footer {
+            background-color: #4a9086;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+        }
+
+        a {
+            color: #fffdfe;
         }
 
         /* Container */
@@ -24,21 +82,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
             width: 400px;
-            position: relative;
-        }
-
-        /* Logo */
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-        }
-
-        .logo img {
-            width: 100px; /* Adjust the size of your logo */
-            height: 100px;
-            border-radius: 50%; /* Make the logo circular */
-            object-fit: cover; /* Ensure the image fits inside the circle */
+            margin-top: 120px; /* Adjusted for the smaller header */
         }
 
         /* Profile Image Placeholder */
@@ -94,34 +138,53 @@
         .delete-btn {
             background-color: #dc2c2c;
         }
+
     </style>
 </head>
 <body>
-    <!-- Logo -->
-    <div class="logo">
-        <img src="images/image1.jpeg" alt="Logo"> <!-- Replace with your logo image path -->
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <img src="images/image1.jpeg" alt="Logo" class="logo">
+
+            <img src="images/image2.jpeg" alt="Profile" class="logo">
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <!-- Profile Form Container -->
+        <div class="container">
+            <!-- Profile Image -->
+            <div class="profile-image">
+                <img src="images/image2.jpeg" alt="Profile">
+            </div>
+            
+            <!-- Input Fields -->
+            <div class="input-fields">
+                <input type="text" placeholder="Enter first name..." class="input-box">
+                <input type="text" placeholder="Enter last name..." class="input-box">
+                <input type="email" placeholder="Enter email..." class="input-box">
+                <input type="password" placeholder="Enter password..." class="input-box">
+            </div>
+            
+            <!-- Buttons -->
+            <div class="buttons">
+                <button class="save-btn">Save Changes</button>
+                <button class="delete-btn">Delete Profile</button>
+            </div>
+        </div>
     </div>
-    <div class="container">
-        <!-- Profile Image -->
-        <div class="profile-image">
-            <img src="images/image2.jpeg" alt="Profile">
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Smart Learn</p>
+            <p>Contact us: <a href="mailto:support@smartlearn.com">support@smartlearn.com</a></p>
         </div>
-        
-        <!-- Input Fields -->
-        <div class="input-fields">
-            <input type="text" placeholder="Enter first name..." class="input-box">
-            <input type="text" placeholder="Enter last name..." class="input-box">
-            <input type="email" placeholder="Enter email..." class="input-box">
-            <input type="password" placeholder="Enter password..." class="input-box">
-        </div>
-        
-        <!-- Buttons -->
-        <div class="buttons">
-            <button class="save-btn">Save Changes</button>
-            <button class="delete-btn">Delete Profile</button>
-        </div>
-    </div>
+    </footer>
+
 </body>
 </html>
-
 

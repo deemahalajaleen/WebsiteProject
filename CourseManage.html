@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Course</title>
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
             background-color: #c3dfde;
             font-family: Arial, sans-serif;
             display: flex;
@@ -14,29 +25,62 @@
             align-items: center;
         }
 
-        /* Logos */
+        /* Header */
+        header {
+            background-color: #4a9086;
+            width: 100%;
+            padding: 20px;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        /* Logos inside header */
         .logo {
-            position: absolute;
-            top: 20px;
             width: 70px;
             height: 70px;
             border-radius: 50%;
             object-fit: cover;
         }
-        .logo.left {
-            left: 20px;
-        }
-        .logo.right {
-            right: 20px;
+
+        /* Title inside header */
+        .header-title {
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
         }
 
-        /* Course Title */
-        .course-title {
-            font-size: 55px;
-            color: #317b6b;
-            margin-top: 100px;
+        /* Footer */
+        footer {
+            background-color: #4a9086;
+            padding: 10px 0;
+            width: 100%;
             text-align: center;
-            font-weight: bold;
+            color: white;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .footer-content p {
+            margin: 5px 0;
+        }
+
+        a {
+            color: #fffdfe;
         }
 
         /* Course Container */
@@ -46,12 +90,13 @@
             gap: 20px;
             flex-wrap: wrap;
             padding: 40px;
+            margin-top: 160px; /* Adjusted for the fixed header */
         }
 
         /* Course Card */
         .course-card {
             width: 300px;
-            background-color: (155, 218, 204rgb);
+            background-color: rgb(155, 218, 204);
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
@@ -124,23 +169,22 @@
 </head>
 <body>
 
-    <!-- Logos -->
-    <img src="images/image1.jpeg" alt="Left Logo" class="logo left">
-    <img src="images/image2.jpeg" alt="Right Logo" class="logo right">
-
-    <!-- Title Section -->
-    <div class="course-title">
-        My Course
-    </div>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <img src="images/image1.jpeg" alt="Left Logo" class="logo">
+            <div class="header-title">My Course</div>
+            <img src="images/image2.jpeg" alt="Right Logo" class="logo">
+        </div>
+    </header>
 
     <!-- Course Section -->
     <div class="course-container">
         <!-- Course 1 -->
         <div class="course-card">
-            <img src="/Users/deemahalajaleen/Desktop/webproject/WebsiteProject/images/image33.png" alt="Introduction to Software Engineering">
-            <h2>Introduction to Software Engineering</h2>
-           
-            <p>Learn software development, architecture, and Agile practices for software engineering.</p>
+            <img src="/Users/deemahalajaleen/Desktop/webproject/WebsiteProject/image33.png" alt="Introduction to Software Engineering">
+            <h2>Arabic for Beginners</h2>
+            <p>Learn the basics of Arabic, including the alphabet, pronunciation, and essential vocabulary.</p>
             <div class="buttons">
                 <button>Edit</button>
                 <button>Delete</button>
@@ -149,10 +193,9 @@
 
         <!-- Course 2 -->
         <div class="course-card">
-            <img src="/Users/deemahalajaleen/Desktop/webproject/WebsiteProject/images/image4.png" alt="Google Cybersecurity Certificate">
-            <h2>Google Cybersecurity Certificate</h2>
-           
-            <p>Master the basics of cybersecurity, including risk management and network security.</p>
+            <img src="/Users/deemahalajaleen/Desktop/webproject/WebsiteProject/image44.png" alt="Google Cybersecurity Certificate">
+            <h2>Intermediate English</h2>
+            <p>Improve your English skills with grammar lessons, vocabulary building, and conversation practice.</p>
             <div class="buttons">
                 <button>Edit</button>
                 <button>Delete</button>
@@ -161,15 +204,23 @@
     </div>
 
     <!-- Add Course Button -->
-    
     <a href="/Users/deemahalajaleen/Desktop/webproject/WebsiteProject/CreatCourse.html">
-        <button class="add-course-btn">  Creat Course</button>
-</a>
+        <button class="add-course-btn">Create Course</button>
+    </a>
 
-
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Smart Learn</p>
+            <p>Contact us: <a href="mailto:support@smartlearn.com">support@smartlearn.com</a> </p>
+        </div>
+    </footer>
 
 </body>
 </html>
+
+
+
 
 
 
