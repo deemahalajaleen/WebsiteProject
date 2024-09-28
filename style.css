@@ -8,23 +8,21 @@ body {
 
 header {
   background-color: #b0e0e6; /* Powder blue header */
+  color: #008080; /* Teal text */
   text-align: center;
-  padding: 1.5em 0; /* Adjust padding for height */
+  padding: 1em 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
 }
 
 .header-content {
   display: flex;
-  align-items: center;
+  align-items: center; /* Align logo and text vertically */
 }
 
 header h1 {
-  font-size: 2em;
-  color: #008080; /* Teal color */
-  margin: 0;
+  margin: 0; /* Reset margin to avoid shifting */
 }
 
 .header-logo {
@@ -96,7 +94,6 @@ form textarea {
   box-sizing: border-box;
 }
 
-/* Adjusted Bio (textarea) style to match other inputs */
 form textarea {
   resize: vertical; /* Allows vertical resizing only */
   min-height: 150px; /* Set a minimum height for better UX */
@@ -140,3 +137,57 @@ footer {
   text-decoration: underline;
 }
 
+/* Hero section styles */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 2em;
+}
+
+.hero-content {
+  flex: 1;
+  padding: 0 2em;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8em 1.5em;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #008080; /* Teal */
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #f08080; /* Light coral */
+  color: #fff;
+}
+
+/* Login page specific styles */
+.login-links {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.login-links a {
+  color: #008080; /* Teal link color */
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
